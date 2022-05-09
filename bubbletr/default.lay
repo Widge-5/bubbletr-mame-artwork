@@ -1,0 +1,153 @@
+<!-- bubbletr.lay -->
+
+<mamelayout version="2">
+	<element name="ledpanel">
+		<image file="ledpanel.png" />
+	</element>	
+	<element name="side_digit" defstate="10">
+		<image file="sideled0.png" state="0" />
+		<image file="sideled1.png" state="1" />
+		<image file="sideled2.png" state="2" />
+		<image file="sideled3.png" state="3" />
+		<image file="sideled4.png" state="4" />
+		<image file="sideled5.png" state="5" />
+		<image file="sideled6.png" state="6" />
+		<image file="sideled7.png" state="7" />
+		<image file="sideled8.png" state="8" />
+		<image file="sideled9.png" state="9" />
+	</element>	
+	<element name="mid_digit" defstate="10">
+		<image file="midled0.png" state="0" />
+		<image file="midled1.png" state="1" />
+		<image file="midled2.png" state="2" />
+		<image file="midled3.png" state="3" />
+		<image file="midled4.png" state="4" />
+		<image file="midled5.png" state="5" />
+		<image file="midled6.png" state="6" />
+		<image file="midled7.png" state="7" />
+		<image file="midled8.png" state="8" />
+		<image file="midled9.png" state="9" />
+	</element>	
+	<element name="digit" defstate="0">
+		<led7seg>
+			<color red="0.870" green="0.149" blue="0.165" />
+		</led7seg>
+	</element>
+	<element name="allclosed" defstate="0">
+		<image file="diorama.png" state="1" />
+	</element>
+	<element name="dark">
+		<image file="diorama.png" />
+	</element>
+	<element name="1open" defstate="0">
+		<image file="trapdoor.png" state="1" />
+	</element>	
+	<element name="2open" defstate="0">
+		<image file="ship.png" state="1" />
+	</element>	
+	<element name="3open" defstate="0">
+		<image file="shell.png" state="1" />
+	</element>	
+	<element name="4open" defstate="0">
+		<image file="chest.png" state="1" />
+	</element>	
+	<element name="5open" defstate="0">
+		<image file="5open.png" state="1" />
+	</element>	
+	<view name="Upright_Artwork">
+		<screen index="0">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</screen>		
+		<backdrop element="ledpanel">
+			<bounds left="-0.16" top="-0.21" right="1.16" bottom="-0.05385" />
+		</backdrop>
+		<backdrop element="dark">
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
+			<color alpha="0.1" />
+		</backdrop>
+		<backdrop name="undersea" element="allclosed">
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
+		</backdrop>
+		<backdrop name="trapdoor" element="1open">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</backdrop>
+		<backdrop name="ship" element="2open">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</backdrop>
+		<backdrop name="shell" element="3open">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</backdrop>
+		<backdrop name="chest" element="4open">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</backdrop>
+
+		<backdrop name="zip100" element="side_digit">
+			<bounds left="-0.098" top="-0.1785" right="-0.046" bottom="-0.085875" />
+		</backdrop>
+		<backdrop name="zip10" element="side_digit">
+			<bounds left="-0.0454" top="-0.1785" right="0.0066" bottom="-0.085875" />
+		</backdrop>
+		<backdrop name="zip1" element="side_digit">
+			<bounds left="0.0082" top="-0.1785" right="0.0603" bottom="-0.085875" />
+		</backdrop>
+		<backdrop name="zap100" element="side_digit">
+			<bounds left="0.9402" top="-0.1785" right="0.9924" bottom="-0.085875" />
+		</backdrop>
+		<backdrop name="zap10" element="side_digit">
+			<bounds left="0.993" top="-0.1785" right="1.0462" bottom="-0.085875" />
+		</backdrop>
+		<backdrop name="zap1" element="side_digit">
+			<bounds left="1.048" top="-0.1785" right="1.1002" bottom="-0.085875" />
+		</backdrop>
+		<backdrop name="time10" element="mid_digit">
+			<bounds left="0.421" top="-0.18195" right="0.4985" bottom="-0.07875" />
+		</backdrop>
+		<backdrop name="time1" element="mid_digit">
+			<bounds left="0.502" top="-0.18195" right="0.5795" bottom="-0.07875" />
+		</backdrop>
+	</view>
+
+
+
+
+	<view name="Static_Diorama_Only">
+		<screen index="0">
+			<bounds x="0" y="0" width="1440" height="1080" />
+		</screen>
+		<backdrop name="diorama" element="dark">
+			<bounds x="0" y="0" width="1440" height="1080" />
+			<color alpha="0.8" />
+		</backdrop>
+	</view>
+
+	<view name="Static_Diorama_Only">
+		<screen index="0">
+			<bounds x="0" y="0" width="1440" height="1080" />
+		</screen>
+		<backdrop name="diorama" element="dark">
+			<bounds x="0" y="0" width="1440" height="1080" />
+			<color alpha="0.8" />
+		</backdrop>
+	</view>
+</mamelayout>
+
+
+
+
+
+<!--
+
+- Artwork type: Backdrop, LED
+- Images of diorama and prop animations captured from video uploaded to Youtube by propcycle
+- https://www.youtube.com/watch?v=PGJDqoiCcTI&t=20s
+
+- Images captured, scaled and edited as a backdrop by Widge
+- Animation functionality for Bubble Trouble (bubbletr) enabled in MAME by StoremdBubbles, ironically.
+- Scoreboard and LED segment images obtained from the Golly Ghost (gollygho) artwork file.
+- Lay file by Widge and StormedBubbles, adapted from the Golly Ghost (gollygho) lay file  -  May 2022
+
+
+- Original logos, artwork and trademarks are property of their respective owners.
+
+
+-->
