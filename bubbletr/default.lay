@@ -109,17 +109,6 @@
 
 
 
-
-	<view name="Static_Diorama_Only">
-		<screen index="0">
-			<bounds x="0" y="0" width="1440" height="1080" />
-		</screen>
-		<backdrop name="diorama" element="dark">
-			<bounds x="0" y="0" width="1440" height="1080" />
-			<color alpha="0.8" />
-		</backdrop>
-	</view>
-
 	<view name="Static_Diorama_Only">
 		<screen index="0">
 			<bounds x="0" y="0" width="1440" height="1080" />
