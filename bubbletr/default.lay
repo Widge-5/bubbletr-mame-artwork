@@ -1,37 +1,40 @@
 <!-- bubbletr.lay -->
 
 <mamelayout version="2">
+
+<!-- Define Elements -->
+
 	<element name="ledpanel">
 		<image file="ledpanel.png" />
 	</element>	
-	<element name="side_digit" defstate="10">
-		<image file="sideled0.png" state="0" />
-		<image file="sideled1.png" state="1" />
-		<image file="sideled2.png" state="2" />
-		<image file="sideled3.png" state="3" />
-		<image file="sideled4.png" state="4" />
-		<image file="sideled5.png" state="5" />
-		<image file="sideled6.png" state="6" />
-		<image file="sideled7.png" state="7" />
-		<image file="sideled8.png" state="8" />
-		<image file="sideled9.png" state="9" />
-	</element>	
-	<element name="mid_digit" defstate="10">
-		<image file="midled0.png" state="0" />
-		<image file="midled1.png" state="1" />
-		<image file="midled2.png" state="2" />
-		<image file="midled3.png" state="3" />
-		<image file="midled4.png" state="4" />
-		<image file="midled5.png" state="5" />
-		<image file="midled6.png" state="6" />
-		<image file="midled7.png" state="7" />
-		<image file="midled8.png" state="8" />
-		<image file="midled9.png" state="9" />
-	</element>	
-	<element name="digit" defstate="0">
-		<led7seg>
-			<color red="0.870" green="0.149" blue="0.165" />
-		</led7seg>
+	<element name="side_digit" defstate="0x00">
+		<image file="sideled0.png" state="0x3f" />
+		<image file="sideled1.png" state="0x06" />
+		<image file="sideled2.png" state="0x5b" />
+		<image file="sideled3.png" state="0x4f" />
+		<image file="sideled4.png" state="0x66" />
+		<image file="sideled5.png" state="0x6d" />
+		<image file="sideled6.png" state="0x7c" />
+		<image file="sideled7.png" state="0x07" />
+		<image file="sideled8.png" state="0x7f" />
+		<image file="sideled9.png" state="0x67" />
+	</element>
+	<element name="mid_digit" defstate="0x00">
+		<image file="midled0.png" state="0x3f" />
+		<image file="midled1.png" state="0x06" />
+		<image file="midled2.png" state="0x5b" />
+		<image file="midled3.png" state="0x4f" />
+		<image file="midled4.png" state="0x66" />
+		<image file="midled5.png" state="0x6d" />
+		<image file="midled6.png" state="0x7c" />
+		<image file="midled7.png" state="0x07" />
+		<image file="midled8.png" state="0x7f" />
+		<image file="midled9.png" state="0x67" />
+	</element>
+*	<element name="digit" defstate="0">
+*		<led7seg>
+*			<color red="0.870" green="0.149" blue="0.165" />
+*		</led7seg>
 	</element>
 	<element name="allclosed" defstate="0">
 		<image file="diorama.png" state="1" />
@@ -54,70 +57,76 @@
 	<element name="5open" defstate="0">
 		<image file="5open.png" state="1" />
 	</element>	
-	<view name="Upright_Artwork">
-		<screen index="0">
+
+<!-- Define Groups -->
+
+
+	<group name="backdrop">
+		<element name="diorama5" element="allclosed">
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
+		</element>
+		<backdrop name="dioramam2" element="1open">
 			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</screen>		
-		<backdrop element="ledpanel">
+		</backdrop>
+		<backdrop name="diorama1" element="2open">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</backdrop>
+		<backdrop name="diorama0" element="3open">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</backdrop>
+		<backdrop name="diorama3" element="4open">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</backdrop>
+	</group>
+
+	<group name="scorepanel">
+		<element ref="ledpanel">
 			<bounds left="-0.16" top="-0.21" right="1.16" bottom="-0.05385" />
-		</backdrop>
-		<backdrop element="dark">
-			<bounds left="-0" top="-0" right="1" bottom="0.75" />
-			<color alpha="0.1" />
-		</backdrop>
-		<backdrop name="undersea" element="allclosed">
-			<bounds left="-0" top="-0" right="1" bottom="0.75" />
-		</backdrop>
-		<backdrop name="trapdoor" element="1open">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</backdrop>
-		<backdrop name="ship" element="2open">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</backdrop>
-		<backdrop name="shell" element="3open">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</backdrop>
-		<backdrop name="chest" element="4open">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</backdrop>
-
-		<backdrop name="zip100" element="side_digit">
+		</element>
+		<element name="digit0" ref="side_digit">
 			<bounds left="-0.098" top="-0.1785" right="-0.046" bottom="-0.085875" />
-		</backdrop>
-		<backdrop name="zip10" element="side_digit">
+		</element>
+		<element name="digit1" ref="side_digit">
 			<bounds left="-0.0454" top="-0.1785" right="0.0066" bottom="-0.085875" />
-		</backdrop>
-		<backdrop name="zip1" element="side_digit">
+		</element>
+		<element name="digit2" ref="side_digit">
 			<bounds left="0.0082" top="-0.1785" right="0.0603" bottom="-0.085875" />
-		</backdrop>
-		<backdrop name="zap100" element="side_digit">
+		</element>
+		<element name="digit5" ref="side_digit">
 			<bounds left="0.9402" top="-0.1785" right="0.9924" bottom="-0.085875" />
-		</backdrop>
-		<backdrop name="zap10" element="side_digit">
+		</element>
+		<element name="digit6" ref="side_digit">
 			<bounds left="0.993" top="-0.1785" right="1.0462" bottom="-0.085875" />
-		</backdrop>
-		<backdrop name="zap1" element="side_digit">
+		</element>
+		<element name="digit7" ref="side_digit">
 			<bounds left="1.048" top="-0.1785" right="1.1002" bottom="-0.085875" />
-		</backdrop>
-		<backdrop name="time10" element="mid_digit">
+		</element>
+		<element name="digit3" ref="mid_digit">
 			<bounds left="0.421" top="-0.18195" right="0.4985" bottom="-0.07875" />
-		</backdrop>
-		<backdrop name="time1" element="mid_digit">
+		</element>
+		<element name="digit4" ref="mid_digit">
 			<bounds left="0.502" top="-0.18195" right="0.5795" bottom="-0.07875" />
-		</backdrop>
-	</view>
+		</element>
+	</group>
 
+<!-- Define Views -->
 
-
-	<view name="Static_Diorama_Only">
-		<screen index="0">
-			<bounds x="0" y="0" width="1440" height="1080" />
+	<view name="Upright_Artwork">
+		<element ref="dark">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+			<color alpha="0.1" />
+		</element>
+		<group ref="backdrop">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
+		</group>
+		<group ref="scorepanel">
+			<bounds left="-0.16" top="-0.21" right="1.16" bottom="-0.05385" />
+		</group>
+		<screen index="0" blend="add">
+			<bounds left="0" top="0" right="1" bottom="0.75" />
 		</screen>
-		<backdrop name="diorama" element="dark">
-			<bounds x="0" y="0" width="1440" height="1080" />
-			<color alpha="0.8" />
-		</backdrop>
 	</view>
+
 </mamelayout>
 
 
