@@ -39,10 +39,10 @@
 	<element name="dark">
 		<image file="diorama.png" />
 	</element>
-	<element name="1open" defstate="0">
+	<element name="2open" defstate="0">
 		<image file="trapdoor.png" state="1" />
 	</element>	
-	<element name="2open" defstate="0">
+	<element name="1open" defstate="0">
 		<image file="ship.png" state="1" />
 	</element>	
 	<element name="3open" defstate="0">
@@ -106,6 +106,7 @@
 			<bounds left="0.502" top="-0.18195" right="0.5795" bottom="-0.07875" />
 		</backdrop>
 	</view>
+
 
 
 
