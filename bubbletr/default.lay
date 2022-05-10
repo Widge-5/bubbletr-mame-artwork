@@ -1,4 +1,4 @@
-<!-- bubbletr.lay -->
+<!-- gollygho.lay -->
 
 <mamelayout version="2">
 
@@ -6,7 +6,7 @@
 
 	<element name="ledpanel">
 		<image file="ledpanel.png" />
-	</element>	
+	</element>
 	<element name="side_digit" defstate="0x00">
 		<image file="sideled0.png" state="0x3f" />
 		<image file="sideled1.png" state="0x06" />
@@ -31,11 +31,6 @@
 		<image file="midled8.png" state="0x7f" />
 		<image file="midled9.png" state="0x67" />
 	</element>
-*	<element name="digit" defstate="0">
-*		<led7seg>
-*			<color red="0.870" green="0.149" blue="0.165" />
-*		</led7seg>
-	</element>
 	<element name="allclosed" defstate="0">
 		<image file="diorama.png" state="1" />
 	</element>
@@ -44,39 +39,35 @@
 	</element>
 	<element name="1open" defstate="0">
 		<image file="trapdoor.png" state="1" />
-	</element>	
+	</element>
 	<element name="2open" defstate="0">
 		<image file="ship.png" state="1" />
-	</element>	
+	</element>
 	<element name="3open" defstate="0">
 		<image file="shell.png" state="1" />
-	</element>	
+	</element>
 	<element name="4open" defstate="0">
 		<image file="chest.png" state="1" />
-	</element>	
-	<element name="5open" defstate="0">
-		<image file="5open.png" state="1" />
-	</element>	
+	</element>
 
 <!-- Define Groups -->
 
-
 	<group name="backdrop">
-		<element name="diorama5" element="allclosed">
+		<element name="diorama5" ref="allclosed">
 			<bounds left="-0" top="-0" right="1" bottom="0.75" />
 		</element>
-		<backdrop name="dioramam2" element="1open">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</backdrop>
-		<backdrop name="diorama1" element="2open">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</backdrop>
-		<backdrop name="diorama0" element="3open">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</backdrop>
-		<backdrop name="diorama3" element="4open">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-		</backdrop>
+		<element name="diorama2" ref="1open">
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
+		</element>
+		<element name="diorama1" ref="2open">
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
+		</element>
+		<element name="diorama0" ref="3open">
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
+		</element>
+		<element name="diorama3" ref="4open">
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
+		</element>
 	</group>
 
 	<group name="scorepanel">
@@ -113,11 +104,11 @@
 
 	<view name="Upright_Artwork">
 		<element ref="dark">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
-			<color alpha="0.1" />
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
+			<color alpha="0.3" />
 		</element>
 		<group ref="backdrop">
-			<bounds left="0" top="0" right="1" bottom="0.75" />
+			<bounds left="-0" top="-0" right="1" bottom="0.75" />
 		</group>
 		<group ref="scorepanel">
 			<bounds left="-0.16" top="-0.21" right="1.16" bottom="-0.05385" />
@@ -126,11 +117,7 @@
 			<bounds left="0" top="0" right="1" bottom="0.75" />
 		</screen>
 	</view>
-
 </mamelayout>
-
-
-
 
 
 <!--
