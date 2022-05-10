@@ -37,10 +37,10 @@
 	<element name="dark">
 		<image file="diorama.png" />
 	</element>
-	<element name="1open" defstate="0">
+	<element name="2open" defstate="0">
 		<image file="trapdoor.png" state="1" />
 	</element>
-	<element name="2open" defstate="0">
+	<element name="1open" defstate="0">
 		<image file="ship.png" state="1" />
 	</element>
 	<element name="3open" defstate="0">
