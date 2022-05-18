@@ -4,32 +4,29 @@
 
 <!-- Define Elements -->
 
-	<element name="ledpanel">
-		<image file="ledpanel.png" />
-	</element>
 	<element name="side_digit" defstate="0x00">
-		<image file="sideled0.png" state="0x3f" />
-		<image file="sideled1.png" state="0x06" />
-		<image file="sideled2.png" state="0x5b" />
-		<image file="sideled3.png" state="0x4f" />
-		<image file="sideled4.png" state="0x66" />
-		<image file="sideled5.png" state="0x6d" />
-		<image file="sideled6.png" state="0x7c" />
-		<image file="sideled7.png" state="0x07" />
-		<image file="sideled8.png" state="0x7f" />
-		<image file="sideled9.png" state="0x67" />
+		<image file="sideled0.svg" state="0x3f" />
+		<image file="sideled1.svg" state="0x06" />
+		<image file="sideled2.svg" state="0x5b" />
+		<image file="sideled3.svg" state="0x4f" />
+		<image file="sideled4.svg" state="0x66" />
+		<image file="sideled5.svg" state="0x6d" />
+		<image file="sideled6.svg" state="0x7c" />
+		<image file="sideled7.svg" state="0x07" />
+		<image file="sideled8.svg" state="0x7f" />
+		<image file="sideled9.svg" state="0x67" />
 	</element>
 	<element name="mid_digit" defstate="0x00">
-		<image file="midled0.png" state="0x3f" />
-		<image file="midled1.png" state="0x06" />
-		<image file="midled2.png" state="0x5b" />
-		<image file="midled3.png" state="0x4f" />
-		<image file="midled4.png" state="0x66" />
-		<image file="midled5.png" state="0x6d" />
-		<image file="midled6.png" state="0x7c" />
-		<image file="midled7.png" state="0x07" />
-		<image file="midled8.png" state="0x7f" />
-		<image file="midled9.png" state="0x67" />
+		<image file="midled0.svg" state="0x3f" />
+		<image file="midled1.svg" state="0x06" />
+		<image file="midled2.svg" state="0x5b" />
+		<image file="midled3.svg" state="0x4f" />
+		<image file="midled4.svg" state="0x66" />
+		<image file="midled5.svg" state="0x6d" />
+		<image file="midled6.svg" state="0x7c" />
+		<image file="midled7.svg" state="0x07" />
+		<image file="midled8.svg" state="0x7f" />
+		<image file="midled9.svg" state="0x67" />
 	</element>
 	<element name="allclosed" defstate="0">
 		<image file="diorama.png" state="1" />
@@ -48,6 +45,27 @@
 	</element>
 	<element name="4open" defstate="0">
 		<image file="chest.png" state="1" />
+	</element>
+	<element name="field">
+		<image file="black_field.svg" />
+	</element>
+	<element name="zip">
+		<image file="zip.svg" />
+	</element>
+	<element name="zap">
+		<image file="zap.svg" />
+	</element>
+	<element name="bolt_zip">
+		<image file="bolt_zip.svg" />
+	</element>
+	<element name="bolt_zap">
+		<image file="bolt_zap.svg" />
+	</element>
+	<element name="time">
+		<image file="time.svg" />
+	</element>
+	<element name="sec">
+		<image file="sec.svg" />
 	</element>
 
 <!-- Define Groups -->
@@ -70,10 +88,33 @@
 		</element>
 	</group>
 
+
 	<group name="scorepanel">
-		<element ref="ledpanel">
+		<element ref="field">
 			<bounds left="-0.16" top="-0.21" right="1.16" bottom="-0.05385" />
 		</element>
+
+		<element name="bolt_zip" ref="bolt_zip">
+			<bounds left="0.0778" top="-0.1885" right="0.2611" bottom="-0.07275" />
+		</element>
+		<element name="bolt_zap" ref="bolt_zap">
+			<bounds left="0.7458" top="-0.1885" right="0.9229" bottom="-0.07275" />
+		</element>
+		<element name="zip" ref="zip">
+			<bounds left="0.098" top="-0.178" right="0.2410" bottom="-0.0845" />
+		</element>
+		<element name="zap" ref="zap">
+			<bounds left="0.7583" top="-0.1785" right="0.9007" bottom="-0.07275" />
+		</element>
+		<element name="time" ref="time">
+			<bounds left="0.2938" top="-0.117" right="0.4160" bottom="-0.085875" />
+		</element>
+		<element name="sec" ref="sec">
+			<bounds left="0.58545" top="-0.1149" right="0.6736" bottom="-0.076375" />
+		</element>
+
+
+
 		<element name="digit0" ref="side_digit">
 			<bounds left="-0.098" top="-0.1785" right="-0.046" bottom="-0.085875" />
 		</element>
@@ -100,12 +141,84 @@
 		</element>
 	</group>
 
+	<group name="scorepanel_wide">
+		<element name="field" ref="field">
+			<bounds x="-240" y="0" width="1920" height="1080" />
+		</element>
+
+		<element name="bolt_zip" ref="bolt_zip">
+			<bounds x="-240" y="0" width="240" height="413" />
+			<orientation rotate="90" />
+		</element>
+		<element name="bolt_zap" ref="bolt_zap">
+			<bounds x="1441" y="0" width="240" height="413" />
+			<orientation rotate="270" />
+		</element>
+		<element name="zip" ref="zip">
+			<bounds x="-216" y="24" width="192" height="332" />
+			<orientation rotate="270" />
+		</element>
+		<element name="zap" ref="zap">
+			<bounds x="1464" y="24" width="192" height="332" />
+			<orientation rotate="90" />
+		</element>
+
+		<element name="digit0" ref="side_digit">
+			<bounds x="-216" y="415" width="64" height="112" />
+		</element>
+		<element name="digit1" ref="side_digit">
+			<bounds x="-153" y="415" width="64" height="112" />
+		</element>
+		<element name="digit2" ref="side_digit">
+			<bounds x="-89" y="415" width="64" height="112" />
+		</element>
+
+
+		<element name="digit5" ref="side_digit">
+			<bounds x="1464" y="415" width="64" height="112" />
+		</element>
+		<element name="digit6" ref="side_digit">
+			<bounds x="1528" y="415" width="64" height="112" />
+		</element>
+		<element name="digit7" ref="side_digit">
+			<bounds x="1592" y="415" width="64" height="112" />
+		</element>
+
+
+		<element name="time" ref="time">
+			<bounds x="-216" y="800" width="192" height="46" />
+		</element>
+		<element name="digit3" ref="mid_digit">
+			<bounds x="-216" y="856" width="97" height="130" />
+		</element>
+		<element name="digit4" ref="mid_digit">
+			<bounds x="-120" y="856" width="97" height="130" />
+		</element>
+		<element name="sec" ref="sec">
+			<bounds x="-180" y="1010" width="120" height="46" />
+		</element>
+
+		<element name="time" ref="time">
+			<bounds x="1464" y="800" width="192" height="46" />
+		</element>
+		<element name="digit3" ref="mid_digit">
+			<bounds x="1464" y="856" width="97" height="130" />
+		</element>
+		<element name="digit4" ref="mid_digit">
+			<bounds x="1561" y="856" width="97" height="130" />
+		</element>
+		<element name="sec" ref="sec">
+			<bounds x="1500" y="1010" width="120" height="46" />
+		</element>
+	</group>
+
+
 <!-- Define Views -->
 
 	<view name="Upright_Artwork">
 		<element ref="dark">
 			<bounds left="-0" top="-0" right="1" bottom="0.75" />
-			<color alpha="0.3" />
+			<color alpha="0.1" />
 		</element>
 		<group ref="backdrop">
 			<bounds left="-0" top="-0" right="1" bottom="0.75" />
@@ -117,18 +230,33 @@
 			<bounds left="0" top="0" right="1" bottom="0.75" />
 		</screen>
 	</view>
-</mamelayout>
 
+	<view name="16:9_Scoreboard">
+		<group ref="scorepanel_wide">
+			<bounds x="-240" y="0" width="1920" height="1080" />
+		</group>
+		<element ref="dark">
+			<bounds x="0" y="0" width="1440" height="1080" />
+			<color alpha="0.1" />
+		</element>
+		<group ref="backdrop">
+			<bounds x="0" y="0" width="1440" height="1080" />
+		</group>
+		<screen index="0" blend="add">
+			<bounds x="0" y="0" width="1440" height="1080" />
+		</screen>
+	</view>
+
+</mamelayout>
 
 <!--
 
+- Version 3.03
 - Artwork type: Backdrop, LED
-- Images of diorama and prop animations captured from video uploaded to Youtube by propcycle
-- https://www.youtube.com/watch?v=PGJDqoiCcTI&t=20s
-
-- Images captured, scaled and edited as a backdrop by Widge
+- Images of diorama obtained from various photos and videos online
+- Images captured, scaled and edited as a backdrop by Widge.
 - Animation functionality for Bubble Trouble (bubbletr) in MAME researched and tested by StoremdBubbles, ironically.
-- Scoreboard and LED segment images obtained from the Golly Ghost (gollygho) artwork file.
+- Scoreboard and LED segment SVG images created by Widge - based on the original PNG images from the Golly Ghost (gollygho) artwork file.
 - Lay file by Widge and StormedBubbles, adapted from the Golly Ghost (gollygho) lay file  -  May 2022
 
 
