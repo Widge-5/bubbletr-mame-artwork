@@ -9,3 +9,5 @@ Version 3 - new style layout file -
 -Alternative scoreboard layout ideal for 16:9 screens.
 
 (download file bubbletr.zip and place in your mame artwork folder)
+
+If you're using Mame2016 or earlier you should use the Version 1 artwork file instead.
