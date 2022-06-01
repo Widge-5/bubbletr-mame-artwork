@@ -1,7 +1,7 @@
 # bubbletr-mame-artwork
 Dynamic artwork for use with "Bubble Trouble: Golly! Ghost! 2" (bubbletr) in mame
 
-Version 3 - new style layout file -
+Version 3 - new style layout file - For use with MAME release 0.244 and later
 
 - Correct assignments of trapdoor and ship, which were the wrong way around in Version 2.0.
 - NEW diorama artwork based on better quality source material than in Version 2.x
