@@ -7,6 +7,7 @@ Version 3 - new style layout file - For use with MAME release 0.244 and later
 - NEW diorama artwork based on better quality source material than in Version 2.x
 - SVG based scoreboard artwork and LED segments
 - Alternative scoreboard layout ideal for 16:9 screens.
+- Background slightly darkened to more accurately reflect the cabinet lighting (artwork source photo was taken outside of cab under bright light so a darkening is necesssary)
 
 (download file bubbletr.zip and place in your mame artwork folder)
 
