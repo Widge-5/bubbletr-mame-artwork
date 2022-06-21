@@ -218,11 +218,11 @@
 	<view name="Upright_Artwork">
 		<element ref="dark">
 			<bounds left="-0" top="-0" right="1" bottom="0.75" />
-			<color alpha="0.1" />
+			<color red="0.1" green="0.1" blue="0.1" />
 		</element>
 		<group ref="backdrop">
 			<bounds left="-0" top="-0" right="1" bottom="0.75" />
-			<color alpha="0.7" />
+			<color red="0.7" green="0.7" blue="0.7" />
 		</group>
 		<group ref="scorepanel">
 			<bounds left="-0.16" top="-0.21" right="1.16" bottom="-0.05385" />
@@ -238,11 +238,11 @@
 		</group>
 		<element ref="dark">
 			<bounds x="0" y="0" width="1440" height="1080" />
-			<color alpha="0.1" />
+			<color red="0.1" green="0.1" blue="0.1" />
 		</element>
 		<group ref="backdrop">
 			<bounds x="0" y="0" width="1440" height="1080" />
-			<color alpha="0.7" />
+			<color red="0.7" green="0.7" blue="0.7" />
 		</group>
 		<screen index="0" blend="add">
 			<bounds x="0" y="0" width="1440" height="1080" />
